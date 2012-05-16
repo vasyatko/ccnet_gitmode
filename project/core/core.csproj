@@ -1,0 +1,1094 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8113DB9-6C47-4FD1-8A01-655FCF151747}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>ThoughtWorks.CruiseControl.Core</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ThoughtWorks.CruiseControl.Core</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\ThoughtWorks.CruiseControl.Core.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>1591</NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>1591</NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Build|AnyCPU' ">
+    <OutputPath>..\..\Build\Core\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\..\Build\Core\ThoughtWorks.CruiseControl.Core.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>1591</NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="edtFTPnet, Version=1.3.0.0, Culture=neutral, PublicKeyToken=4b0c991f43097782">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\edtFTPnet.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <Name>log4net</Name>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NetReflector, Version=1.1.2009.1214, Culture=neutral, PublicKeyToken=2f4dd8b32acbcd8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NetReflector.dll</HintPath>
+    </Reference>
+    <Reference Include="NPlot">
+      <Name>NPlot</Name>
+      <HintPath>..\..\lib\NPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting">
+      <Name>System.Runtime.Remoting</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Remote\Remote.csproj">
+      <Name>Remote</Name>
+      <Project>{E820CF3B-8C5A-4002-BC16-B7818D3D54A8}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\ConfigurationTrace.cs" />
+    <Compile Include="configuration\ConfigurationValidationUtils.cs" />
+    <Compile Include="ConsoleRunnerArguments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\CachingConfigurationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\DefaultQueueConfiguration.cs" />
+    <Compile Include="configuration\IConfigurationErrorProcesser.cs" />
+    <Compile Include="configuration\IConfigurationValidation.cs" />
+    <Compile Include="configuration\INetReflectorConfigurationReader.cs" />
+    <Compile Include="configuration\QueueDuplicateHandling.cs" />
+    <Compile Include="configuration\Configuration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\ConfigurationException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\CruiseControlConfigSectionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\DefaultConfigurationFileLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\DefaultConfigurationFileSaver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\FileConfigurationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\FileWatcherConfigurationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\IConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\IConfigurationFileLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\IConfigurationFileSaver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\IConfigurationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\IQueueConfiguration.cs" />
+    <Compile Include="configuration\NetReflectorConfigurationReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\preprocessor\ConfigPreprocessor.cs" />
+    <Compile Include="configuration\preprocessor\ConfigPreprocessorEnvironment.cs" />
+    <Compile Include="configuration\preprocessor\Constant.cs" />
+    <Compile Include="configuration\preprocessor\PreprocessorUrlResolver.cs" />
+    <Compile Include="configuration\preprocessor\Utils.cs" />
+    <Compile Include="configuration\ServerConfiguration.cs" />
+    <Compile Include="configuration\ServerConfigurationHandler.cs" />
+    <Compile Include="configuration\XmlValidatingLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configuration\XslFilesSectionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConsoleEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConsoleRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CruiseControlRemotingException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CruiseManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CruiseServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CruiseServerClient.cs" />
+    <Compile Include="CruiseServerEventsBase.cs" />
+    <Compile Include="CruiseServerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CruiseXmlWriter.cs" />
+    <Compile Include="Extensions\DiskSpaceMonitorExtension.cs" />
+    <Compile Include="Extensions\IntegrationRequestThrottleExtension.cs" />
+    <Compile Include="Extensions\IntegrationPerformanceCountersExtension.cs" />
+    <Compile Include="ICruiseServerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IIntegratable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IIntegrationRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IIntegrationResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IIntegrationResultManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IIntegrationRunnerTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMergeTask.cs" />
+    <Compile Include="IntegrationPropertyNames.cs" />
+    <Compile Include="IntegrationQueueManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IParamatisedProject.cs" />
+    <Compile Include="IntegrationResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IntegrationResultManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IntegrationRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IntegrationStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IntegrationSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProjectIntegrator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProjectIntegratorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProjectIntegratorList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProjectList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProjectSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IStatusItem.cs" />
+    <Compile Include="IStatusSnapshotGenerator.cs" />
+    <Compile Include="ITask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITaskResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITemporaryResult.cs" />
+    <Compile Include="label\AssemblyVersionLabeller.cs" />
+    <Compile Include="label\DateLabeller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="label\DefaultLabeller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="label\FileLabeller.cs" />
+    <Compile Include="label\ILabeller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="label\IterationLabeller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="label\LabellerBase.cs" />
+    <Compile Include="label\LastChangeLabeller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="label\RemoteProjectLabeller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="label\StateFileLabeller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LogFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\CircularArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\EnumeratorDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\ServerLogFileReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DisplayLevel.cs" />
+    <Compile Include="MultipleIntegrationFailureException.cs" />
+    <Compile Include="NetReflectorProjectSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Project.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProjectBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProjectIntegrator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProjectIntegratorList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProjectIntegratorListFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProjectList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProjectInitialState.cs" />
+    <Compile Include="ProjectStartupMode.cs" />
+    <Compile Include="publishers\BuildLogTransformer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\BuildPublisher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\ConditionalPublisher.cs" />
+    <Compile Include="publishers\EmailLDAPConverter.cs" />
+    <Compile Include="publishers\EmailRegexConverter.cs" />
+    <Compile Include="publishers\EmailGateway.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\EmailGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\EmailMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\EmailPublisher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\EmailSubject.cs" />
+    <Compile Include="publishers\EmailUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\ForceBuildPublisher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\HtmlDetailsMessageBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\HtmlLinkMessageBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\IEmailConverter.cs" />
+    <Compile Include="publishers\IManifestGenerator.cs" />
+    <Compile Include="publishers\IMessageBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\ManifestGenerator.cs" />
+    <Compile Include="publishers\ManifestImporter.cs" />
+    <Compile Include="publishers\ModificationHistoryPublisher.cs" />
+    <Compile Include="publishers\PackagePublisher.cs" />
+    <Compile Include="publishers\RssPublisher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\Statistics\FirstMatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\Statistics\IPlotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\Statistics\Plotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\Statistics\Statistic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\Statistics\StatisticBase.cs" />
+    <Compile Include="publishers\Statistics\StatisticResult.cs" />
+    <Compile Include="publishers\Statistics\StatisticsBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\Statistics\StatisticsCalculator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\Statistics\StatisticsChartGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\Statistics\StatisticsPublisher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\Statistics\StatisticsResults.cs" />
+    <Compile Include="publishers\Statistics\UnavailableStatisticsException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\XmlIntegrationResultWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="publishers\XmlLogPublisher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Queues\IIntegrationQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Queues\IIntegrationQueueItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Queues\IIntegrationQueueNotifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Queues\IntegrationQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Queues\IntegrationQueueItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Queues\IntegrationQueueManagerFactory.cs" />
+    <Compile Include="Queues\IntegrationQueueSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Queues\IQueueManager.cs" />
+    <Compile Include="Queues\IQueueManagerFactory.cs" />
+    <Compile Include="RemoteCruiseServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\AbsolutePathUrlBuilderDecorator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\DefaultBuildSpecifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\DefaultCruiseUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\DefaultProjectSpecifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\DefaultServerSpecifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\DefaultUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\IBuildSpecifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\ICruiseUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\IPhysicalApplicationPathProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\IProjectSpecifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\IServerSpecifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reporting\Dashboard\Navigation\ISessionStorer.cs" />
+    <Compile Include="Reporting\Dashboard\Navigation\IUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Security\ChannelSecurityInformation.cs" />
+    <Compile Include="Security\IChannelSecurity.cs" />
+    <Compile Include="IClock.cs" />
+    <Compile Include="Security\ImpersonationDetails.cs" />
+    <Compile Include="Security\InheritedProjectAuthorisation.cs" />
+    <Compile Include="Security\Permissions.cs" />
+    <Compile Include="Security\ProjectSecurityConfigurationInformation.cs" />
+    <Compile Include="Security\RemotingChannelSecurityInformation.cs" />
+    <Compile Include="Security\SecureMessagesChannel.cs" />
+    <Compile Include="sourcecontrol\IQuitePeriod.cs" />
+    <Compile Include="SystemClock.cs" />
+    <Compile Include="SourceControlOperation.cs" />
+    <Compile Include="Security\ActiveDirectoryAuthentication.cs" />
+    <Compile Include="Security\Auditing\AuditLoggerBase.cs" />
+    <Compile Include="Security\Auditing\FileXmlLogger.cs" />
+    <Compile Include="Security\Auditing\FileXmlReader.cs" />
+    <Compile Include="Security\Auditing\IAuditLogger.cs" />
+    <Compile Include="Security\Auditing\IAuditReader.cs" />
+    <Compile Include="Security\DefaultProjectAuthorisation.cs" />
+    <Compile Include="Security\ExternalFileSecurityManager.cs" />
+    <Compile Include="Security\FileBasedSessionCache.cs" />
+    <Compile Include="Security\IAuthentication.cs" />
+    <Compile Include="Security\InMemorySessionCache.cs" />
+    <Compile Include="Security\InternalSecurityManager.cs" />
+    <Compile Include="Security\IPermission.cs" />
+    <Compile Include="Security\IProjectAuthorisation.cs" />
+    <Compile Include="Security\ISecurityManager.cs" />
+    <Compile Include="Security\ISecuritySetting.cs" />
+    <Compile Include="Security\ISessionCache.cs" />
+    <Compile Include="Security\NullProjectAuthorisation.cs" />
+    <Compile Include="Security\NullSecurityManager.cs" />
+    <Compile Include="Security\PermissionBase.cs" />
+    <Compile Include="Security\RolePermission.cs" />
+    <Compile Include="Security\SecurityHelpers.cs" />
+    <Compile Include="Security\SecurityManagerBase.cs" />
+    <Compile Include="Security\SecurityPermission.cs" />
+    <Compile Include="Security\ServerSecurityConfigurationInformation.cs" />
+    <Compile Include="Security\SessionCacheBase.cs" />
+    <Compile Include="Security\SessionExpiryMode.cs" />
+    <Compile Include="Security\UserName.cs" />
+    <Compile Include="Security\UserNameAuthentication.cs" />
+    <Compile Include="Security\UserPasswordAuthentication.cs" />
+    <Compile Include="Security\UserPermission.cs" />
+    <Compile Include="sourcecontrol\AccuRev.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\AccuRevHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\ActionFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Alienbrain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\AlienbrainHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\BitKeeper\BitKeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\BitKeeper\BitKeeperHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\ClearCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\ClearCaseHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\CommentFilter.cs" />
+    <Compile Include="sourcecontrol\Common.cs" />
+    <Compile Include="sourcecontrol\Cvs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\CvsHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\ExternalSourceControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\ExternalSourceControlHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\FileSourceControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\FilteredSourceControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\FtpSourceControl.cs" />
+    <Compile Include="sourcecontrol\Git.cs" />
+    <Compile Include="sourcecontrol\GitHistoryParser.cs" />
+    <Compile Include="sourcecontrol\IHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\IModificationFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\IModificationUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\ISourceControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\IStarTeamRegExProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\IVssLocale.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Mercurial\HgWebUrlBuilder.cs" />
+    <Compile Include="sourcecontrol\Mercurial\Mercurial.cs" />
+    <Compile Include="sourcecontrol\Mercurial\MercurialHistoryParser.cs" />
+    <Compile Include="sourcecontrol\Mercurial\MercurialModification.cs" />
+    <Compile Include="sourcecontrol\Mercurial\MercurialModificationCollection.cs" />
+    <Compile Include="sourcecontrol\Mercurial\MultipleHeadsFoundException.cs" />
+    <Compile Include="sourcecontrol\Mks.cs" />
+    <Compile Include="sourcecontrol\MksHistoryParser.cs" />
+    <Compile Include="sourcecontrol\Modification.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\MultiIssueTrackerUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\MultiSourceControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\NullSourceControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\NullUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\PathFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Perforce\IP4Initializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Perforce\IP4ProcessInfoCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Perforce\IP4Purger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Perforce\P4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Perforce\P4ConfigProcessInfoCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Perforce\P4HistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Perforce\ProcessP4Initializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Perforce\ProcessP4Purger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\PlasticSCM.cs" />
+    <Compile Include="sourcecontrol\PlasticSCMHistoryParser.cs" />
+    <Compile Include="sourcecontrol\ProcessSourceControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Pvcs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\PvcsHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\QuietPeriod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\DefaultIssueTrackerUrlBuilder.cs" />
+    <Compile Include="sourcecontrol\RegExIssueTrackerUrlBuilder.cs" />
+    <Compile Include="sourcecontrol\RobocopyHistoryParser.cs" />
+    <Compile Include="sourcecontrol\RobocopySourceControl.cs" />
+    <Compile Include="sourcecontrol\SourceControlBase.cs" />
+    <Compile Include="sourcecontrol\StarTeam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\StarTeamHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Surround.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\SurroundHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Svn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\SvnHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Telelogic\ChangeSynergyUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Telelogic\ISynergyCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Telelogic\Synergy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Telelogic\SynergyCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Telelogic\SynergyCommandBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Telelogic\SynergyConnectionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Telelogic\SynergyParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Telelogic\SynergyProcessExecutor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Telelogic\SynergyProjectInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\UserFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Vault3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Vault317.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\VaultHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\VaultVersionChecker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\ViewCVSUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Vss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\VssHistoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\VssLocale.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sourcecontrol\Vsts.cs" />
+    <Compile Include="sourcecontrol\VstsHistoryParser.cs" />
+    <Compile Include="sourcecontrol\WebSVNUrlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="state\FileStateManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="state\IProjectStateManager.cs" />
+    <Compile Include="state\IStateManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="state\XmlProjectStateManager.cs" />
+    <Compile Include="tasks\ArtifactCleanUp.cs" />
+    <Compile Include="tasks\BaseExecutableTask.cs" />
+    <Compile Include="tasks\BuilderException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\CodeItRightTask.cs" />
+    <Compile Include="tasks\CoverageFilter.cs" />
+    <Compile Include="tasks\CoverageThreshold.cs" />
+    <Compile Include="tasks\CruiseServerControlTask.cs" />
+    <Compile Include="tasks\CruiseServerControlTaskAction.cs" />
+    <Compile Include="tasks\CruiseServerControlTaskActionType.cs" />
+    <Compile Include="tasks\DirectDynamicValue.cs" />
+    <Compile Include="tasks\DupFinderTask.cs" />
+    <Compile Include="tasks\DynamicValueUtility.cs" />
+    <Compile Include="tasks\FBVariable.cs" />
+    <Compile Include="tasks\FtpTask.cs" />
+    <Compile Include="tasks\HttpRequestHeader.cs" />
+    <Compile Include="tasks\HttpRequestSettings.cs" />
+    <Compile Include="tasks\HttpStatusTask.cs" />
+    <Compile Include="tasks\MergeFileSerialiser.cs" />
+    <Compile Include="tasks\MergeFileSerialiserFactory.cs" />
+    <Compile Include="tasks\MergeFileInfo.cs" />
+    <Compile Include="tasks\NCoverReportTask.cs" />
+    <Compile Include="tasks\NCoverProfileTask.cs" />
+    <Compile Include="tasks\DataTaskResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\DevenvTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\DevenvTaskResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\ExecutableTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\FileTaskResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\FinalBuilderTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\IDynamicValue.cs" />
+    <Compile Include="IParamatisedItem.cs" />
+    <Compile Include="tasks\GendarmeTask.cs" />
+    <Compile Include="tasks\MergeFilesTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\ModificationReaderTask.cs" />
+    <Compile Include="tasks\ModificationWriterTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\MsBuildTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\NAntTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\NDependTask.cs" />
+    <Compile Include="tasks\XmlTaskResult.cs" />
+    <Compile Include="util\ICompressionService.cs" />
+    <Compile Include="util\IPrivateData.cs" />
+    <Compile Include="util\PrivateArguments.cs" />
+    <Compile Include="util\PrivateString.cs" />
+    <Compile Include="util\PrivateStringSerialiser.cs" />
+    <Compile Include="util\PrivateStringSerialiserFactory.cs" />
+    <Compile Include="util\SecureDataMode.cs" />
+    <Compile Include="util\UriSerializer.cs" />
+    <Compile Include="util\UriSerializerFactory.cs" />
+    <Compile Include="util\NetworkCredentialSerializerFactory.cs" />
+    <Compile Include="util\NetworkCredentialsSerializer.cs" />
+    <Compile Include="tasks\NullTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\NUnitArgument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\NUnitTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\ParallelTask.cs" />
+    <Compile Include="tasks\PowerShellTask.cs" />
+    <Compile Include="tasks\ProcessTaskResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tasks\RakeTask.cs" />
+    <Compile Include="tasks\ReplacementDynamicValue.cs" />
+    <Compile Include="tasks\SequentialTask.cs" />
+    <Compile Include="tasks\SynchronisationTask.cs" />
+    <Compile Include="tasks\TaskBase.cs" />
+    <Compile Include="tasks\TaskContainerBase.cs" />
+    <Compile Include="Triggers\FilterTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Triggers\IntervalTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Triggers\MultipleTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Triggers\ParameterTrigger.cs" />
+    <Compile Include="Triggers\ProjectTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Triggers\ScheduleTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Triggers\UrlTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\AccurateTimer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\AssemblyMatch.cs" />
+    <Compile Include="util\BuildProgressInformation.cs" />
+    <Compile Include="util\ConsoleTraceListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\DateTimeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\DateUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\DefaultLogger.cs" />
+    <Compile Include="util\DefaultShadowCopier.cs" />
+    <Compile Include="util\EnvironmentVariable.cs" />
+    <Compile Include="util\ExecutionEnvironment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\FileChangedWatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\FtpLib.cs" />
+    <Compile Include="util\HtmlAwareMultiTransformer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\HtmlExceptionFormatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\HttpWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\IFileDirectoryDeleter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\IFileSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\IFileTransformer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\IFileWatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\IFtpLib.cs" />
+    <Compile Include="util\ILdapService.cs" />
+    <Compile Include="util\ILogger.cs" />
+    <Compile Include="util\Impersonation.cs" />
+    <Compile Include="util\IMultiTransformer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\IoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\IRegistry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\IShadowCopier.cs" />
+    <Compile Include="util\IStringFormatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\ITransformer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\KillUtil.cs" />
+    <Compile Include="util\LdapHelper.cs" />
+    <Compile Include="util\LdapUserInfo.cs" />
+    <Compile Include="util\Log4NetTrace\ITraceLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\Log4NetTrace\TraceLogImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\Log4NetTrace\TraceLogManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\LogFileTraceListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\LogUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\NotifierList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\PathUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\ProcessArgumentBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\ProcessExecutor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\ProcessInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\ProcessOutputEventArgs.cs" />
+    <Compile Include="util\ProcessOutputType.cs" />
+    <Compile Include="util\ProcessResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\ReflectionUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\Registry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\StringUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\SynchronisedData.cs" />
+    <Compile Include="util\SystemIoFileSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\SystemPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\TempFileUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\TestTraceListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\Timeout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\TimeoutSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\TimeoutSerializerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\TimeUnits.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\Utf8StringWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\WildCardPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\XmlFragmentWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\XmlUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\XslTransformer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="util\ZipCompressionService.cs" />
+    <Compile Include="Workflow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkflowResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="configuration\ccnet.xsd">
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sourcecontrol\VssLocale.de.resx">
+      <DependentUpon>VssLocale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sourcecontrol\VssLocale.es.resx">
+      <DependentUpon>VssLocale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sourcecontrol\VssLocale.fr.resx">
+      <DependentUpon>VssLocale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sourcecontrol\VssLocale.ja.resx">
+      <DependentUpon>VssLocale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sourcecontrol\VssLocale.resx">
+      <DependentUpon>VssLocale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="configuration\ccnet.xsx">
+      <DependentUpon>ccnet.xsd</DependentUpon>
+    </None>
+    <Content Include="..\xsl\compile.xsl">
+      <Link>publishers\xsl\compile.xsl</Link>
+    </Content>
+    <Content Include="..\xsl\cruisecontrol.css">
+      <Link>publishers\xsl\cruisecontrol.css</Link>
+    </Content>
+    <Content Include="..\xsl\header.xsl">
+      <Link>publishers\xsl\header.xsl</Link>
+    </Content>
+    <Content Include="..\xsl\modifications.xsl">
+      <Link>publishers\xsl\modifications.xsl</Link>
+    </Content>
+    <Content Include="..\xsl\MsTestSummary.xsl">
+      <Link>publishers\xsl\MsTestSummary.xsl</Link>
+    </Content>
+    <Content Include="..\xsl\unittests.xsl">
+      <Link>publishers\xsl\unittests.xsl</Link>
+    </Content>
+    <EmbeddedResource Include="sourcecontrol\MksHistory-viewsandbox-mods.xsl" />
+    <EmbeddedResource Include="configuration\preprocessor\ConfigPreprocessor.xslt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>mkdir "$(TargetDir)xsl"
+xcopy /q /y "$(SolutionDir)\xsl\*.*" "$(TargetDir)xsl"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
